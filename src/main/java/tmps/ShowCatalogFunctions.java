@@ -32,15 +32,12 @@ public class ShowCatalogFunctions {
           "\n|--|Pret: " +
           compartiment.getPieces().get(i).getPret() +
           " mdl" +
-          "\n|--|Cantitate: " +
-          compartiment.getPieces().get(i).getGrame() +
-          " g||ml" +
           "\n|--|Descriere: " +
           compartiment.getPieces().get(i).getDescriere());
     }
 
     System.out.println("");
-    System.out.println("(back - inapoi || main - meniul principal)");
+    System.out.println("(back - inapoi || main - catalogul principal)");
     System.out.println("Alegeti inserand numarul potrivit: ");
   }
 
@@ -52,14 +49,14 @@ public class ShowCatalogFunctions {
     System.out.println("Basket: ");
     System.out.println("|----------List----------|");
 
-    for (int i = 0; i < bascket.getClientProducts().size(); i++) {
+    for (int i = 0; i < bascket.getClientPieces().size(); i++) {
 
       compartiment = compartimentList.get(getIndexCompartimentList(bascket, i));
       System.out.println(
           getIndexCompartimentList(bascket, i) + ". " +
               compartiment.getName() + " :"
       );
-      for (int j = 0; j < bascket.getClientProducts().get(i).getProductBaskets().size(); j++) {
+      for (int j = 0; j < bascket.getClientPieces().get(i).getPieceBaskets().size(); j++) {
 
         piece = compartiment.getPieces().get(getIndexPieceList(bascket, i, j));
         System.out.println("-------------------");
@@ -80,11 +77,11 @@ public class ShowCatalogFunctions {
   }
 
   private int getIndexPieceList(ClientBascket bascket, int i, int j) {
-    return bascket.getClientProducts().get(i).getProductBaskets().get(j).indexPiece;
+    return bascket.getClientPieces().get(i).getPieceBaskets().get(j).indexPiece;
   }
 
   private int getIndexCompartimentList(ClientBascket bascket, int i) {
-    return bascket.getClientProducts().get(i).getIndexComaprtiment();
+    return bascket.getClientPieces().get(i).getIndexComaprtiment();
   }
 
   public void EmptyLines() {

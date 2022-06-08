@@ -3,7 +3,7 @@ package tmps;
 public interface CatalogBuilder {
   void AddCompartiment(String titlu);
 
-  void AddPiece(int index, String titlu, String descriere, int grame, int pret);
+  void AddPiece(int index, String titlu, String descriere, int pret);
 
   void AddClonedPiece(int indexCompartiment, int indexPiece);
 

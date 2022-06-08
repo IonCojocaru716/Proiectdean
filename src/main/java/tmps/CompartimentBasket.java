@@ -10,17 +10,17 @@ public class CompartimentBasket {
     this.indexComaprtiment = indexCompartiment;
   }
 
-  public void addIndexProduct(int indexProduct){
-    PieceBasket product = new PieceBasket();
-    product.indexPiece = indexProduct;
-    pieceBaskets.add(product);
+  public void addIndexPiece(int indexPiece){
+    PieceBasket piece = new PieceBasket();
+    piece.indexPiece = indexPiece;
+    pieceBaskets.add(piece);
   }
 
   public int getIndexComaprtiment() {
     return indexComaprtiment;
   }
 
-  public ArrayList<PieceBasket> getProductBaskets() {
+  public ArrayList<PieceBasket> getPieceBaskets() {
     return this.pieceBaskets;
   }
 }

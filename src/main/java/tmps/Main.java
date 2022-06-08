@@ -6,10 +6,10 @@ public class Main {
   public static void main(String[] args) {
 
     Catalog catalog = new Catalog();
-    CatalogMemento catalogMemento;
-    ClientBascket bascket = new ClientBascket();
     int thisCompartiment = 0;
+    CatalogMemento catalogMemento;
     boolean isExit = true;
+    ClientBascket bascket = new ClientBascket();
     boolean isCompartiment = false;
     String command;
 
@@ -23,36 +23,30 @@ public class Main {
 
       if (command.contains("exit")) isExit = false;//iese din app
 
-      else if (command.contains("add")) {
-
-        CreatePieceOrCompartiment(command, catalog);//adauga compartiment sau produs
-        isCompartiment = false;
-
-      } else if (command.contains("restoreBackup")) {
+      else if (command.contains("restoreBackup")) {
 
         catalog.loadBackup(catalogMemento); // reia backupul
         System.out.println("Backup este restaurat");
+
+      } else if (command.contains("add")) {
+
+        CreatePieceOrCompartiment(command, catalog);//adauga compartiment sau produs
+        isCompartiment = false;
 
       } else if (command.contains("backup")) {
 
         catalogMemento = new CatalogMemento(catalog.getCatalogForSave()); // facem backup la catalog
         System.out.println("Backup este facut");
 
-      } else if (command.contains("clonePiece")) {
-
-        ClonePiece(catalog); // clonam un produs
-        isCompartiment = false;
-
       } else if (command.contains("remove")) {
 
         RemovePieceOrCompartiment(command, catalog);// stergem un produs sau compartiment
         isCompartiment = false;
 
-      } else if (isNumeric(command) && !isCompartiment) {
+      } else if (command.contains("clonePiece")) {
 
-        catalog.ShowSubCatalog(Integer.parseInt(command));
-        thisCompartiment = Integer.parseInt(command);
-        isCompartiment = true;
+        ClonePiece(catalog); // clonam un produs
+        isCompartiment = false;
 
       } else if (isNumeric(command) && isCompartiment) {
 
@@ -61,6 +55,12 @@ public class Main {
             get(thisCompartiment).getPieces().
             get(Integer.parseInt(command)).
             getTitlu() + " a fost adaugat in cos");
+
+      } else if (isNumeric(command) && !isCompartiment) {
+
+        catalog.ShowSubCatalog(Integer.parseInt(command));
+        thisCompartiment = Integer.parseInt(command);
+        isCompartiment = true;
 
       } else if ((command.contains("back") && isCompartiment) || command.contains("main")) {
 
@@ -83,15 +83,14 @@ public class Main {
       catalog.AddCompartiment(titlu);
       catalog.ShowMainCatalog();
 
-    } else if (string.contains("Product")) {
+    } else if (string.contains("Piece")) {
 
       int index = InputInt("Inserati indexul compartimentului: ");
-      String titlu = InputString("Inserati titlul produsului: ");
-      String descriere = InputString("Inserati descrierea produsului: ");
-      int grame = InputInt("Inserati gramele produsului: ");
-      int pret = InputInt("Inserati pretul produsului: ");
+      String titlu = InputString("Inserati titlul piesei: ");
+      String descriere = InputString("Inserati descrierea piesei: ");
+      int pret = InputInt("Inserati pretul piesei: ");
 
-      catalog.AddPiece(index, titlu, descriere, grame, pret);
+      catalog.AddPiece(index, titlu, descriere, pret);
       catalog.ShowMainCatalog();
 
     } else {
@@ -111,7 +110,7 @@ public class Main {
     } else if (string.contains("Piece")) {
 
       int indexCompartiment = InputInt("Inserati indexul compartimentului: ");
-      int indexPiece = InputInt("Inserati indexul produsului: ");
+      int indexPiece = InputInt("Inserati indexul piesei: ");
 
       catalog.RemovePiece(indexCompartiment, indexPiece);
       catalog.ShowMainCatalog();
@@ -123,7 +122,7 @@ public class Main {
 
   public static void ClonePiece(Catalog catalog) {
     int indexCompartiment = InputInt("Inserati indexul compartimentului: ");
-    int indexPiece = InputInt("Inserati indexul produsului: ");
+    int indexPiece = InputInt("Inserati indexul piesei: ");
 
     catalog.AddClonedPiece(indexCompartiment, indexPiece);
     catalog.ShowMainCatalog();

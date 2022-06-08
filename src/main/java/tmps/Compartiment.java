@@ -18,8 +18,8 @@ public class Compartiment{
     return this.compartimentPieces;
   }
 
-  public void AddPiece(String titlu, String descriere, int grame, int pret){
-    this.compartimentPieces.add(new Piece(titlu, descriere, grame, pret));
+  public void AddPiece(String titlu, String descriere, int pret){
+    this.compartimentPieces.add(new Piece(titlu, descriere, pret));
   }
 
   public void AddClonedPiece(Piece piece){

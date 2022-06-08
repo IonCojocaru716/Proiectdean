@@ -24,9 +24,9 @@ public class Catalog extends WorkingWithFiles implements CatalogBuilder {
   }
 
   @Override
-  public void AddPiece(int index, String titlu, String descriere, int grame, int pret) {
+  public void AddPiece(int index, String titlu, String descriere, int pret) {
 
-    this.compartimentList.get(index).AddPiece(titlu, descriere, grame, pret);
+    this.compartimentList.get(index).AddPiece(titlu, descriere, pret);
     SaveCatalog(this.compartimentList);
     ReloadedCatalog();
   }

@@ -3,13 +3,13 @@ package tmps;
 import java.util.ArrayList;
 
 public class CatalogMemento {
-  private final ArrayList<Compartiment> menuBackup;
+  private final ArrayList<Compartiment> catalogBackup;
 
-  public CatalogMemento(ArrayList<Compartiment> menuBackup) {
-    this.menuBackup = menuBackup;
+  public CatalogMemento(ArrayList<Compartiment> catalogBackup) {
+    this.catalogBackup = catalogBackup;
   }
 
   public ArrayList<Compartiment> getCatalogBackup() {
-    return menuBackup;
+    return catalogBackup;
   }
 }

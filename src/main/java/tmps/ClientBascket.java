@@ -3,27 +3,27 @@ package tmps;
 import java.util.ArrayList;
 
 public class ClientBascket {
-  private ArrayList<CompartimentBasket> clientProducts = new ArrayList<CompartimentBasket>();
+  private ArrayList<CompartimentBasket> clientPieces = new ArrayList<CompartimentBasket>();
   private boolean isExistCompartiment = false;
 
-  public void addPieceBasket(int indexCompartiment, int indexProduct) {
+  public void addPieceBasket(int indexCompartiment, int indexPiece) {
 
-    for (CompartimentBasket compartimentBasket : clientProducts) {
+    for (CompartimentBasket compartimentBasket : clientPieces) {
       if (compartimentBasket.getIndexComaprtiment() == indexCompartiment)
         isExistCompartiment = true;
     }
 
     if (isExistCompartiment) {
-      this.clientProducts.get(indexCompartiment).addIndexProduct(indexProduct);
+      this.clientPieces.get(indexCompartiment).addIndexPiece(indexPiece);
     } else {
       CompartimentBasket compartimentBasket = new CompartimentBasket(indexCompartiment);
-      compartimentBasket.addIndexProduct(indexProduct);
-      this.clientProducts.add(compartimentBasket);
+      compartimentBasket.addIndexPiece(indexPiece);
+      this.clientPieces.add(compartimentBasket);
     }
     isExistCompartiment = false;
   }
 
-  public ArrayList<CompartimentBasket> getClientProducts() {
-    return clientProducts;
+  public ArrayList<CompartimentBasket> getClientPieces() {
+    return clientPieces;
   }
 }
