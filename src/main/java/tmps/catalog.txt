@@ -1,0 +1,94 @@
+[
+  {
+    "name": "Bauturi racoritoare",
+    "compartimentProducts": [
+      {
+        "titlu": "Coca cola 0.25",
+        "descriere": "250 ml",
+        "grame": 250,
+        "pret": 20
+      },
+      {
+        "titlu": "Fanta 0.25",
+        "descriere": "Bautura racoritoare gazata",
+        "grame": 250,
+        "pret": 25
+      },
+      {
+        "titlu": "Sprite 0.25",
+        "descriere": "...",
+        "grame": 250,
+        "pret": 25
+      }
+    ]
+  },
+  {
+    "name": "Bucate reci",
+    "compartimentProducts": [
+      {
+        "titlu": "Caprese",
+        "descriere": "Rosii...",
+        "grame": 300,
+        "pret": 79
+      },
+      {
+        "titlu": "Hummus clasic",
+        "descriere": "---)",
+        "grame": 240,
+        "pret": 75
+      },
+      {
+        "titlu": "Tagliere Picante",
+        "descriere": ".....",
+        "grame": 220,
+        "pret": 155
+      }
+    ]
+  },
+  {
+    "name": "Micul dejun",
+    "compartimentProducts": [
+      {
+        "titlu": "Terci ",
+        "descriere": "...",
+        "grame": 300,
+        "pret": 30
+      },
+      {
+        "titlu": "Ochisori",
+        "descriere": "...",
+        "grame": 150,
+        "pret": 30
+      },
+      {
+        "titlu": "Tartine cu salame",
+        "descriere": "...",
+        "grame": 200,
+        "pret": 20
+      }
+    ]
+  },
+  {
+    "name": "Salate",
+    "compartimentProducts": [
+      {
+        "titlu": "Salata Caesar",
+        "descriere": "...",
+        "grame": 250,
+        "pret": 92
+      },
+      {
+        "titlu": "Salata Greca",
+        "descriere": ".....",
+        "grame": 240,
+        "pret": 75
+      },
+      {
+        "titlu": "Salata Primavera",
+        "descriere": "....",
+        "grame": 230,
+        "pret": 45
+      }
+    ]
+  }
+]
