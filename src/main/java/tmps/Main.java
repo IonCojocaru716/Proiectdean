@@ -26,7 +26,7 @@ public class Main {
       else if (command.contains("restoreBackup")) {
 
         catalog.loadBackup(catalogMemento); // reia backupul
-        System.out.println("Backup este restaurat");
+        System.out.println("Backup este magazin de piese");
 
       } else if (command.contains("add")) {
 
@@ -43,7 +43,7 @@ public class Main {
         RemovePieceOrCompartiment(command, catalog);// stergem un produs sau compartiment
         isCompartiment = false;
 
-      } else if (command.contains("clonePiece")) {
+      } else if (command.contains("clonePiese")) {
 
         ClonePiece(catalog); // clonam un produs
         isCompartiment = false;

@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 public class ReloadCatalog implements Strategy{
   private static final Gson gson = new GsonBuilder().setPrettyPrinting().create();
-  private Path fileName = Path.of("C:\\Users\\ionio\\Desktop\\Proiect Cojocaru\\ProiectAnTMPS\\src\\main\\java\\tmps\\catalog.txt");
+  private Path fileName = Path.of("C:\\Users\\Ionel\\Desktop\\ProiectAnTMPS\\src\\main\\java\\tmps\\catalog.txt");
 
   @Override
   public Object execute(ArrayList<Compartiment> compartimentList) {

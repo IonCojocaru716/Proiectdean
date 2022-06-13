@@ -7,7 +7,7 @@ public class ShowCatalogFunctions {
 
   public void ShowMainCatalog(ArrayList<Compartiment> compartimentList) {
     EmptyLines();
-    System.out.println("Restaurant UTM");
+    System.out.println("Magazin de piese");
     System.out.println("");
 
     for (int i = 0; i < compartimentList.size(); i++) {
@@ -22,7 +22,7 @@ public class ShowCatalogFunctions {
     Compartiment compartiment = compartimentList.get(indexCompartiment);
 
     EmptyLines();
-    System.out.println("Restaurant UTM");
+    System.out.println("Magazin de piese");
     System.out.println(indexCompartiment + ". " + compartiment.getName() + ": ");
     System.out.println("|----------List----------|");
 

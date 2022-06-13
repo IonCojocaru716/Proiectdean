@@ -1,92 +1,32 @@
 [
   {
-    "name": "Bauturi racoritoare",
-    "compartimentProducts": [
+    "name": "Motor",
+    "compartimentPieces": [
       {
-        "titlu": "Coca cola 0.25",
-        "descriere": "250 ml",
-        "grame": 250,
-        "pret": 20
-      },
-      {
-        "titlu": "Fanta 0.25",
-        "descriere": "Bautura racoritoare gazata",
-        "grame": 250,
-        "pret": 25
-      },
-      {
-        "titlu": "Sprite 0.25",
+        "titlu": "Rulment",
         "descriere": "...",
-        "grame": 250,
-        "pret": 25
+        "pret": 67
       }
     ]
   },
   {
-    "name": "Bucate reci",
-    "compartimentProducts": [
-      {
-        "titlu": "Caprese",
-        "descriere": "Rosii...",
-        "grame": 300,
-        "pret": 79
-      },
-      {
-        "titlu": "Hummus clasic",
-        "descriere": "---)",
-        "grame": 240,
-        "pret": 75
-      },
-      {
-        "titlu": "Tagliere Picante",
-        "descriere": ".....",
-        "grame": 220,
-        "pret": 155
-      }
-    ]
+    "name": "bucse",
+    "compartimentPieces": []
   },
   {
-    "name": "Micul dejun",
-    "compartimentProducts": [
-      {
-        "titlu": "Terci ",
-        "descriere": "...",
-        "grame": 300,
-        "pret": 30
-      },
-      {
-        "titlu": "Ochisori",
-        "descriere": "...",
-        "grame": 150,
-        "pret": 30
-      },
-      {
-        "titlu": "Tartine cu salame",
-        "descriere": "...",
-        "grame": 200,
-        "pret": 20
-      }
-    ]
+    "name": "filtru",
+    "compartimentPieces": []
   },
   {
-    "name": "Salate",
-    "compartimentProducts": [
+    "name": "",
+    "compartimentPieces": []
+  },
+  {
+    "name": "5",
+    "compartimentPieces": [
       {
-        "titlu": "Salata Caesar",
-        "descriere": "...",
-        "grame": 250,
-        "pret": 92
-      },
-      {
-        "titlu": "Salata Greca",
-        "descriere": ".....",
-        "grame": 240,
-        "pret": 75
-      },
-      {
-        "titlu": "Salata Primavera",
-        "descriere": "....",
-        "grame": 230,
+        "titlu": "ceva",
+        "descriere": "vdsgdfgdsghsdrthgsdthdfgdfg",
         "pret": 45
       }
     ]
